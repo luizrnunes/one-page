@@ -2,4 +2,4 @@
 
 
 # beh-injetaveis
-Desenvolvendo um site para uma cliente real, para divulgação de procedimentos estéticos
+Desenvolvendo um site para uma cliente, onde vai trabalhar a divulgação de procedimentos estéticos.
