@@ -2,8 +2,8 @@
 
 
 # beh-injetaveis
-Desenvolvendo um site para uma cliente, onde vai trabalhar a divulgação de procedimentos estéticos.
-
+Projeto de desenvolvimento web para uma profissional da área de estética. O site tem como objetivo apresentar os serviços oferecidos, 
+destacar os procedimentos realizados e facilitar o contato com clientes.
 # Autor
 
 Luiz Henrique Rodrigues Nunes
