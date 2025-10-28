@@ -22,20 +22,81 @@
     box-sizing: border-box;
 }
 body{
-    font-family: "Open Sans", sans-serif;
+    font-family: "Playwrite US Modern", "Noto Serif";
 }
+
+.container{
+    display: flex;
+}
+
+
 
 /* FIMM - LAYOUT << */
 
 
 /*Smartphone portrait*/
+/* Cabeçalho */
+header{
+    height: 65px;
+    background-color: #b2a698;
+}
 
+.logo img{
+    width: 230px;
+    height: 65px;
+}
 
+#check{
+    display: none; 
+}
+
+label{
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.85);
+    position: fixed;
+    top: -10px;
+    right: 30px;
+}
+
+nav ul{
+    list-style: none;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    background-color: rgba(178, 166, 152, 0.9);
+    width: 65%;
+    right: -65%; /*ajustar com width*/
+    transition: all 0.75s;
+}
+
+/* Ação para a caixa check */
+/* quando selecionada mudar ul */
+#check:checked~ul{
+    right: 0;
+
+}
+
+nav ul li{
+    padding: 15px;
+    border-bottom: 1px solid var(--begeClaro);
+    text-align: right;
+    font-family: "Noto Serif";
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--branco);
+}
 /*FIM DO SMARTPHONE PORTRAIT */
 
 
 /*Smartphone lanscape*/
 @media (min-width: 576px) {
+    /* Cabeçalho */
+    nav ul{
+        width: 40%;
+        right: -40%;
+    }
 
 
 }
@@ -43,27 +104,44 @@ body{
 
 
 /*Tablet portrait*/
-@media (min-width: 768px) {
-
-
-}
+@media (min-width: 768px) {}
 /*fim Tablet portrait*/
 
 /* Tablet landscape */
-@media (min-width: 992px) {
-
-
-}
+@media (min-width: 992px) {}
 /* FIM Tablet landscape */
-
-
-/*Smartphone lanscape*/
-
-/*FIM Smartphone lanscape*/
 
 /* Notebook / PC - HD */
 @media (min-width: 1200px) {
+    header {
+        height: 100px;
+    }
 
+    .logo img{
+        width: 350px;
+        height: 100px;
+    }
+    
+    label{
+        display: none;
+    }
+
+    nav ul{
+        position: static;
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+    }
+
+    nav ul li{
+        float:left ;
+        border: 0;
+    }
+
+    nav ul li a:hover{
+        color: var(--bordo);
+
+    }
 }
 /* FIM Notebook / PC - HD */
 
