@@ -6,7 +6,7 @@
 /* Layout >>>>>>>> */
 
 /* Variaveis */
-:root{
+:root {
     --bege: #b28f69;
     --begeMédio: #b2a698;
     --begeClaro: #eae1d7;
@@ -16,41 +16,56 @@
 }
 
 /* CSS RESET */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: "Playwrite US Modern", "Noto Serif";
 }
 
-.container{
+.container {
     display: flex;
+    margin: 0 auto;
+    /* Centralizar o Container */
 }
 
-
+/* BOTÃO */
+.btn {
+    text-decoration: none;
+    font-weight: 500;
+    background-color: #b2a698;
+    padding: 5px 30px;
+    color: #ffffff;
+    border-radius: 25px;
+    border: 2px solid var(--bordo);
+    text-shadow:
+        0px 2px 3px rgba(0, 0, 0, 0.10),
+        0px 4px 6px rgba(43, 26, 26, 0.05);
+}
 
 /* FIMM - LAYOUT << */
 
 
 /*Smartphone portrait*/
 /* Cabeçalho */
-header{
+header {
     height: 65px;
     background-color: #b2a698;
 }
 
-.logo img{
+.logo img {
     width: 230px;
     height: 65px;
 }
 
-#check{
-    display: none; 
+#check {
+    display: none;
 }
 
-label{
+label {
     font-size: 3rem;
     color: rgba(255, 255, 255, 0.85);
     position: fixed;
@@ -58,96 +73,278 @@ label{
     right: 30px;
 }
 
-nav ul{
+nav ul {
     list-style: none;
     height: 100vh;
     position: fixed;
     top: 60px;
     background-color: rgba(178, 166, 152, 0.9);
     width: 65%;
-    right: -65%; /*ajustar com width*/
+    right: -65%;
+    /*ajustar com width*/
     transition: all 0.75s;
+    margin-top: 3px;
 }
 
 /* Ação para a caixa check */
 /* quando selecionada mudar ul */
-#check:checked~ul{
-    right: 0;
+#check:checked~ul {
+    right: 0px;
 
 }
 
-nav ul li{
-    padding: 15px;
+nav ul li {
+    padding: 20px;
     border-bottom: 1px solid var(--begeClaro);
     text-align: right;
     font-family: "Noto Serif";
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: var(--branco);
 }
+
 /*FIM DO SMARTPHONE PORTRAIT */
+
+/* PRINCIPAL DO SMARTHPHONE PORTRAIT */
+main {
+    height: 50vh;
+    background: url(img/banner.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+main .container {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1 {
+    color: #925e5e;
+    font-size: 100px;
+    font-family: "Noto Serif", sans-serif;
+    letter-spacing: 0.2rem;
+    text-shadow:
+        0px 2px 3px rgba(0, 0, 0, 0.15),
+        0px 4px 6px rgba(43, 26, 26, 0.15);
+
+}
+
+main h2 {
+    color: #925e5e;
+    font-weight: 800;
+    font-size: 70px;
+    text-shadow:
+        0px 2px 3px rgba(0, 0, 0, 0.10),
+        0px 4px 6px rgba(43, 26, 26, 0.3);
+
+
+}
+
+/* Destaque */
+
+#destaque {
+    padding: 50px 10px;
+    background: url(./img/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#destaque .container {
+    flex-direction: column;
+}
+
+#hero {
+    text-align: center;
+}
+
+#hero img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 25px;
+}
+
+.hero-text h2 {
+    font-size: 1.6rem;
+    color: var(--branco);
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    color: var(--branco);
+}
+
+.topic {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.topic p {
+    margin-left: 15px;
+}
+
+/*FIM DO SMARTPHONE PORTRAIT */
+
+
+/*SMARTPHONE LANDSCAPE*/
 
 
 /*Smartphone lanscape*/
 @media (min-width: 576px) {
+
+    /* Layout */
+    .container {
+        max-width: 540px;
+    }
+
     /* Cabeçalho */
-    nav ul{
+    nav ul {
         width: 40%;
         right: -40%;
     }
 
+    /* Principal */
+    main {
+        height: 75vh;
+    }
 
+    main h1 {
+        font-size: 2.75rem;
+    }
+
+    main h2 {
+        font-size: 2.5rem;
+    }
 }
+
 /*FIM DO Smartphone lanscape*/
 
 
 /*Tablet portrait*/
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+
+    /* Layout */
+    .container {
+        max-width: 720px;
+    }
+
+    /* Principal */
+    main h1 {
+        font-size: 3.9rem;
+    }
+
+    main h2 {
+        font-size: 3rem;
+    }
+}
+
 /*fim Tablet portrait*/
 
 /* Tablet landscape */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+
+    /* Layout */
+    .container {
+        max-width: 960px;
+    }
+}
+
 /* FIM Tablet landscape */
 
 /* Notebook / PC - HD */
 @media (min-width: 1200px) {
+
+    /* LAYOUT   */
+    .container {
+        justify-content: space-between;
+        max-width: 1140px;
+    }
+
     header {
         height: 100px;
     }
 
-    .logo img{
+    .logo img {
         width: 350px;
         height: 100px;
     }
-    
-    label{
+
+    label {
         display: none;
     }
 
-    nav ul{
+    nav ul {
         position: static;
         width: 100%;
         height: auto;
         background-color: transparent;
     }
 
-    nav ul li{
-        float:left ;
+    nav ul li {
+        float: left;
         border: 0;
     }
 
-    nav ul li a:hover{
+    nav ul li a:hover {
         color: var(--bordo);
 
     }
+
+    main h1 {
+        font-size: 4rem;
+    }
+
+    main h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Destaque */
+    #destaque {
+        background-attachment: fixed;
+        /*Parallax*/
+    }
+
+    #hero img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .topic {
+        display: flex;
+    }
+
 }
+
 /* FIM Notebook / PC - HD */
 
 
 /* Notebook / PV / TV - Full HD ou 4k */
 @media (min-width: 1400px) {
 
+
+    /* LAYOUT */
+    .container {
+        justify-content: space-between;
+        max-width: 1320px;
+    }
+
+    main h1 {
+        font-size: 6rem;
+    }
+
+    main h2 {
+        font-size: 3rem;
+    }
+
 }
+
 /*FIM  Notebook / PV / TV - Full HD ou 4k */
