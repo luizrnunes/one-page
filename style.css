@@ -29,7 +29,6 @@ body {
 .container {
     display: flex;
     margin: 0 auto;
-    /* Centralizar o Container */
 }
 
 /* BOTÃO */
@@ -46,11 +45,7 @@ body {
         0px 4px 6px rgba(43, 26, 26, 0.05);
 }
 
-/* FIMM - LAYOUT << */
-
-
 /*Smartphone portrait*/
-/* Cabeçalho */
 header {
     height: 65px;
     background-color: #b2a698;
@@ -81,16 +76,12 @@ nav ul {
     background-color: rgba(178, 166, 152, 0.9);
     width: 65%;
     right: -65%;
-    /*ajustar com width*/
     transition: all 0.75s;
     margin-top: 3px;
 }
 
-/* Ação para a caixa check */
-/* quando selecionada mudar ul */
 #check:checked~ul {
     right: 0px;
-
 }
 
 nav ul li {
@@ -105,15 +96,12 @@ nav ul li a {
     color: var(--branco);
 }
 
-/*FIM DO SMARTPHONE PORTRAIT */
-
-/* PRINCIPAL DO SMARTHPHONE PORTRAIT */
+/* PRINCIPAL DO SMARTPHONE */
 main {
     height: 50vh;
     background: url(img/banner.png);
     background-size: cover;
     background-position: center;
-
 }
 
 main .container {
@@ -131,7 +119,6 @@ main h1 {
     text-shadow:
         0px 2px 3px rgba(0, 0, 0, 0.15),
         0px 4px 6px rgba(43, 26, 26, 0.15);
-
 }
 
 main h2 {
@@ -141,12 +128,9 @@ main h2 {
     text-shadow:
         0px 2px 3px rgba(0, 0, 0, 0.10),
         0px 4px 6px rgba(43, 26, 26, 0.3);
-
-
 }
 
 /* Destaque */
-
 #destaque {
     padding: 50px 10px;
     background: url(./img/background.jpg);
@@ -166,6 +150,15 @@ main h2 {
     width: 200px;
     height: 200px;
     margin-bottom: 25px;
+    border-radius: 100px;
+    border: 5px solid var(--bordo);
+}
+
+/* Esconde a imagem em telas pequenas */
+@media (max-width: 991px) {
+    #hero img {
+        display: none;
+    }
 }
 
 .hero-text h2 {
@@ -175,7 +168,9 @@ main h2 {
 }
 
 .hero-text p {
+    text-align: center;
     color: var(--branco);
+    font-family: "Noto Serif";
 }
 
 .topic {
@@ -188,27 +183,17 @@ main h2 {
     margin-left: 15px;
 }
 
-/*FIM DO SMARTPHONE PORTRAIT */
-
-
 /*SMARTPHONE LANDSCAPE*/
-
-
-/*Smartphone lanscape*/
 @media (min-width: 576px) {
-
-    /* Layout */
     .container {
         max-width: 540px;
     }
 
-    /* Cabeçalho */
     nav ul {
         width: 40%;
         right: -40%;
     }
 
-    /* Principal */
     main {
         height: 75vh;
     }
@@ -222,18 +207,12 @@ main h2 {
     }
 }
 
-/*FIM DO Smartphone lanscape*/
-
-
 /*Tablet portrait*/
 @media (min-width: 768px) {
-
-    /* Layout */
     .container {
         max-width: 720px;
     }
 
-    /* Principal */
     main h1 {
         font-size: 3.9rem;
     }
@@ -243,23 +222,21 @@ main h2 {
     }
 }
 
-/*fim Tablet portrait*/
-
 /* Tablet landscape */
-@media (min-width: 992px) {
-
-    /* Layout */
+/* Tablet landscape */
+@media (min-width: 992px) and (max-width: 1199px) {
     .container {
         max-width: 960px;
     }
-}
 
-/* FIM Tablet landscape */
+    /* Oculta a imagem apenas no tablet landscape */
+    #hero img {
+        display: none;
+    }
+}
 
 /* Notebook / PC - HD */
 @media (min-width: 1200px) {
-
-    /* LAYOUT   */
     .container {
         justify-content: space-between;
         max-width: 1140px;
@@ -292,7 +269,6 @@ main h2 {
 
     nav ul li a:hover {
         color: var(--bordo);
-
     }
 
     main h1 {
@@ -303,35 +279,56 @@ main h2 {
         font-size: 1.6rem;
     }
 
-    /* Destaque */
     #destaque {
         background-attachment: fixed;
-        /*Parallax*/
+    }
+
+    /* Hero ajustado: imagem à esquerda, texto à direita */
+    #hero {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 60px;
+        position: relative;
+        text-align: right;
     }
 
     #hero img {
-        width: 400px;
-        height: 400px;
+        width: 250px;
+        height: 250px;
+        border-radius: 250px;
+        border: 5px solid var(--bordo);
+        flex-shrink: 0;
+        margin-left: 0;
+    }
+
+    .hero-text {
+        margin-top: -300px;
+        margin-left: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: right;
     }
 
     .hero-text h2 {
         font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+        line-height: 1.6;
     }
 
     .topic {
         display: flex;
     }
-
 }
 
-/* FIM Notebook / PC - HD */
-
-
-/* Notebook / PV / TV - Full HD ou 4k */
+/* Notebook / TV - Full HD ou 4K */
 @media (min-width: 1400px) {
-
-
-    /* LAYOUT */
     .container {
         justify-content: space-between;
         max-width: 1320px;
@@ -343,8 +340,8 @@ main h2 {
 
     main h2 {
         font-size: 3rem;
-    }
 
+    }
 }
 
-/*FIM  Notebook / PV / TV - Full HD ou 4k */
+
