@@ -183,6 +183,168 @@ main h2 {
     margin-left: 15px;
 }
 
+/* Sobre */
+#sobre {
+    padding: 50px 10px;
+    background-color: var(--begeMédio);
+}
+
+#sobre .container {
+    flex-direction: column;
+
+}
+
+#video iframe {
+    width: 355px;
+    height: 196px;
+}
+
+.sobre-text h2 {
+    color: var(--branco);
+    margin-top: 5px;
+    text-align: center;
+    font-family: "Playwrite US Modern";
+    background-color: #925e5e;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    line-height: 2.0;
+}
+
+.sobre-text p {
+    color: var(--branco);
+    font-family: 'Noto Serif';
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+#wireframe {
+    padding: 50px 10px;
+    background-color: var(--bordo);
+}
+
+#wireframe .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.wireframe-text h2 {
+    color: var(--branco);
+    margin-top: 1px;
+    font-size: 1.25rem;
+    text-align: center;
+    font-family: "Noto Serif";
+    line-height: 2.0;
+}
+
+.wireframe-text p {
+    color: var(--branco);
+    font-family: 'Noto Serif';
+    text-align: center;
+    background-color: #b2a698;
+    border-radius: 50px;
+    border: 2px solid var(--begeClaro);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding: 15px 25px;
+    margin-bottom: 20px;
+}
+
+.botão {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background-color: var(--begeMédio);
+    padding: 9px 25px;
+    color: var(--branco);
+    border: 5px solid var(--begeClaro);
+    border-radius: 25px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#wireframe span {
+    display: none;
+}
+
+
+/* Cartões */
+/* Seção principal */
+#produto {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 50px 0 !important;
+    box-sizing: border-box !important;
+    background-color: var(--bordo);
+    border: 5px solid var(--branco);
+}
+
+/* Container com os cards centralizados e espaçados */
+#produto .container {
+    display: flex !important;
+    flex-direction: row !important; /* dois cards lado a lado */
+    align-items: flex-start !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 30px !important;
+    width: 100% !important;
+    max-width: 1000px;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+}
+
+/* Cards iguais e centralizados */
+.card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 420px !important;
+    height: 520px !important;
+    background-color: #925e5e !important; /* fundo dos cards */
+    border-radius: 20px !important;
+    border: 6px solid var(--branco);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
+    padding: 25px !important;
+    box-sizing: border-box !important;
+}
+
+/* Imagens circulares e centralizadas */
+.card img {
+    display: block !important;
+    width: 180px !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    border: 5px solid var(--branco) !important;
+    margin-bottom: 25px !important;
+}
+
+/* Títulos e textos centralizados */
+.card h2 {
+    color: var(--branco);
+    font-family: 'Noto Serif';
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: var(--branco);
+    font-family: 'Noto Serif';
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+
+
 /*SMARTPHONE LANDSCAPE*/
 @media (min-width: 576px) {
     .container {
@@ -205,6 +367,12 @@ main h2 {
     main h2 {
         font-size: 2.5rem;
     }
+
+    #video iframe {
+        width: 560px;
+        height: 315px;
+        margin-top: 25px;
+    }
 }
 
 /*Tablet portrait*/
@@ -223,13 +391,11 @@ main h2 {
 }
 
 /* Tablet landscape */
-/* Tablet landscape */
 @media (min-width: 992px) and (max-width: 1199px) {
     .container {
         max-width: 960px;
     }
 
-    /* Oculta a imagem apenas no tablet landscape */
     #hero img {
         display: none;
     }
@@ -283,7 +449,6 @@ main h2 {
         background-attachment: fixed;
     }
 
-    /* Hero ajustado: imagem à esquerda, texto à direita */
     #hero {
         display: flex;
         align-items: center;
@@ -325,6 +490,19 @@ main h2 {
     .topic {
         display: flex;
     }
+
+    #video iframe {
+        margin: 0px 0px 0px 50px;
+    }
+
+    #sobre .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .sobre-text h2 {
+        font-size: 2rem;
+    }
 }
 
 /* Notebook / TV - Full HD ou 4K */
@@ -340,8 +518,8 @@ main h2 {
 
     main h2 {
         font-size: 3rem;
-
     }
 }
+
 
 
