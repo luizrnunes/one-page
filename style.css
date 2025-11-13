@@ -187,6 +187,7 @@ main h2 {
 #sobre {
     padding: 50px 10px;
     background-color: var(--begeMédio);
+    border-top:8px solid var(--branco);
 }
 
 #sobre .container {
@@ -220,6 +221,7 @@ main h2 {
 #wireframe {
     padding: 50px 10px;
     background-color: var(--bordo);
+    border-top:8px solid var(--branco);
 }
 
 #wireframe .container {
@@ -271,64 +273,80 @@ main h2 {
 
 /* Cartões */
 /* Seção principal */
-#produto {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    padding: 50px 0 !important;
-    box-sizing: border-box !important;
-    background-color: var(--bordo);
-    border: 5px solid var(--branco);
+#card {
+    display: flex ;
+    background-color: var(--branco);
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: center ;
+    width: 100% ;
+    padding: 30px 0 ;
+    box-sizing: border-box ;
 }
 
 /* Container com os cards centralizados e espaçados */
-#produto .container {
-    display: flex !important;
-    flex-direction: row !important; /* dois cards lado a lado */
-    align-items: flex-start !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-    gap: 30px !important;
-    width: 100% !important;
+#card {
+    display: flex;
+    padding: 50px 10px;
+    background: url(./img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30px 0;
+    border-top:8px solid var(--branco);
+}
+
+/* Container com os cards centralizados e espaçados */
+#card .container {
+    display: flex;
+    flex-direction: column; /* empilhados no celular */
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
     max-width: 1000px;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
-/* Cards iguais e centralizados */
+/* Cards ajustados para celular */
 .card {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 420px !important;
-    height: 520px !important;
-    background-color: #925e5e !important; /* fundo dos cards */
-    border-radius: 20px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%; /* ocupa quase toda a tela no celular */
+    max-width: 420px;
+    background-color: #925e5e;
+    border-radius: 20px;
     border: 6px solid var(--branco);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
-    padding: 25px !important;
-    box-sizing: border-box !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    box-sizing: border-box;
 }
 
-/* Imagens circulares e centralizadas */
+/* Imagem proporcional */
 .card img {
-    display: block !important;
-    width: 180px !important;
-    height: 180px !important;
-    object-fit: cover !important;
-    border-radius: 50% !important;
-    border: 5px solid var(--branco) !important;
-    margin-bottom: 25px !important;
+    display: block;
+    width: 60%;
+    max-width: 180px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--branco);
+    margin-bottom: 25px;
 }
 
-/* Títulos e textos centralizados */
+/* Títulos e textos */
 .card h2 {
     color: var(--branco);
     font-family: 'Noto Serif';
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
     margin-bottom: 15px;
 }
@@ -336,12 +354,158 @@ main h2 {
 .card p {
     color: var(--branco);
     font-family: 'Noto Serif';
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.5;
     text-align: center;
     flex-grow: 1;
 }
 
+#endereco { 
+    background-color: var(--begeMédio);
+    padding: 60px 10px;
+    border-top: 8px solid var(--branco);
+    display: flex;
+    justify-content: center;
+}
+
+#endereco .container {
+    display: flex;
+    font-family: 'Noto Serif';
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+/* Google Maps - estilo circular */
+#googlemaps iframe {
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    border: 8px solid var(--bordo);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    object-fit: cover;
+}
+
+/* Bloco da direita */
+#contatos img {
+    margin-top: 15px;
+    margin-left: 5px;
+    align-items: left;
+    justify-content: left;
+}
+
+#contatos p {
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: var(--bordo);
+    border: 2px solid var(--branco);
+    border-radius: 25px;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    color: var(--branco);
+    align-items: right;
+    justify-content: right;
+}
+
+#telefone img {
+    margin-top: 15px;
+    margin-left: 5px;
+    align-items: left;
+    justify-content: left;
+}
+
+#telefone p {
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: var(--bordo);
+    border: 2px solid var(--branco);
+    border-radius: 25px;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    color: var(--branco);
+    align-items: right;
+    justify-content: right;
+}
+
+#local img {
+    margin-top: -20px;
+    margin-left: 5px;
+    align-items: left;
+    justify-content: left;
+}
+
+#local p {
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: var(--bordo);
+    border: 2px solid var(--branco);
+    border-radius: 25px;
+    width: 260px;
+    height: 80px;
+    text-align: center;
+    color: var(--branco);
+    align-items: right;
+    justify-content: right;
+}
+
+#email img {
+    margin-top: 15px;
+    margin-left: 5px;
+    align-items: left;
+    justify-content: left;
+}
+
+#email p {
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: var(--bordo);
+    border: 2px solid var(--branco);
+    border-radius: 25px;
+    width: 260px;
+    height: 30px;
+    text-align: center;
+    color: var(--branco);
+    align-items: right;
+    justify-content: right;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #endereco .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #googlemaps iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    #contatos {
+        align-items: center;
+    }
+
+    .contato-item p {
+        font-size: 14px;
+        padding: 6px 14px;
+    }
+    #contatos a{
+    text-decoration: none;
+    color: var(--branco);
+
+    }
+    #local a {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+}
 
 
 
@@ -503,6 +667,151 @@ main h2 {
     .sobre-text h2 {
         font-size: 2rem;
     }
+
+    #card .container {
+        flex-direction: row; /* lado a lado */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+    }
+    #endereco { 
+    background-color: var(--begeMédio);
+    padding: 50px 10px;
+    border-top: 8px solid var(--branco);
+}
+
+#endereco .container {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Google Maps */
+#googlemaps iframe {
+    display: block;
+    width: 400px;
+    height: 300px;
+    border-radius: 50px;
+    border: 5px solid var(--branco);
+}
+
+/* Contatos padrão (mobile/tablet) */
+#contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+/* Computador: duas colunas ao lado direito do mapa */
+@media (min-width: 992px) {
+    #endereco .container {
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+
+    #contatos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "telefone local"
+            "contato email";
+        gap: 25px 40px;
+        justify-items: end;
+        align-items: center;
+        text-align: left;
+        width: 50%;
+    }
+
+    #telefone {
+        grid-area: telefone;
+    }
+
+    #local {
+        grid-area: local;
+    }
+
+    #email {
+        grid-area: email;
+    }
+}
+
+#contato img {
+    margin-top: 15px;
+    margin-left: 5px;
+    align-items: left;
+    text-align: left;
+    justify-content: left;
+}
+
+#contatos p {
+    margin-top: 5px;
+    margin-left: 5px;
+    color: var(--branco);
+    align-items: right;
+    text-align: center;
+    justify-content: right;
+}
+
+#telefone img {
+    margin-top: 15px;
+    margin-left: 5px;
+    align-items: left;
+    justify-content: left;
+}
+
+#telefone p {
+    margin-top: 5px;
+    margin-left: 5px;
+    color: var(--branco);
+    text-align: center;
+    align-items: right;
+    justify-content: right;
+}
+
+#local img {
+    margin-top: 15px;
+    margin-left: 5px;
+    align-items: left;
+    justify-content: left;
+}
+
+#local p {
+    margin-top: 5px;
+    margin-left: 5px;
+    color: var(--branco);
+    text-align: center;
+    align-items: right;
+    justify-content: right;
+}
+
+#email img {
+    margin-top: 15px;
+    margin-left: 5px;
+    align-items: left;
+    justify-content: left;
+}
+
+#email p {
+    margin-top: 5px;
+    margin-left: 5px;
+    color: var(--branco);
+    text-align: center;
+    align-items: right;
+    justify-content: right;
+}
+#contatos a{
+    text-decoration: none;
+    color: var(--branco);
+
+    }
+    #local a {
+    text-decoration: none;
+    color: var(--branco);
+}
 }
 
 /* Notebook / TV - Full HD ou 4K */
