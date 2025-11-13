@@ -504,9 +504,33 @@ main h2 {
     text-decoration: none;
     color: var(--branco);
 }
+/* Rodapé */
 
+footer {
+    padding: 25px 10px;
+    background-color: var(--marromBemEscuro);
+    color: var(--branco);
+    align-items: center;
 }
 
+#social {
+    margin-bottom: 25px;
+}
+
+#copyright p {
+    text-decoration: none;
+    color: var(--marromBemEscuro);
+}
+
+/* botão de subir */
+#topo {
+    position: fixed;
+    bottom: 75px;
+    right: 15px;
+}
+
+}
+/* Fim - Smartphone portrait ********************** */
 
 
 /*SMARTPHONE LANDSCAPE*/
