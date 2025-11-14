@@ -504,30 +504,50 @@ main h2 {
     text-decoration: none;
     color: var(--branco);
 }
-/* Rodapé */
+/* Rodapé */ 
+footer { 
+    padding: 50px 10px; 
+    background-color: var(--bordo); 
+    color: var(--bordo); align-items: 
+    center; position: relative; 
+} 
 
-footer {
-    padding: 25px 10px;
-    background-color: var(--marromBemEscuro);
-    color: var(--branco);
-    align-items: center;
-}
-
-#social {
-    margin-bottom: 25px;
-}
-
-#copyright p {
-    text-decoration: none;
-    color: var(--marromBemEscuro);
-}
-
-/* botão de subir */
-#topo {
-    position: fixed;
-    bottom: 75px;
-    right: 15px;
-}
+    /* Ícones no topo, centralizados */ 
+    #social { 
+        position: absolute; 
+        top: 5px; left: 50%; 
+        transform: translateX(-50%); 
+        margin: 1; 
+    }
+     /* Copyright logo abaixo dos ícones */ 
+     #copyright .container{ 
+        position: absolute; 
+        top: 
+        50px; /* distância dos botões – ajuste se quiser */ 
+        transform: translateX(-50%); 
+        margin-right: 50px; 
+        align-items: 50px; 
+        text-align: center; 
+        font-size: 5px; /* menor */ 
+    } 
+    #copyright p { 
+        text-decoration: none; 
+        top: 5px; 
+        text-align: center; 
+        font-size: 15px; 
+        color: var(--branco); 
+    } 
+    #copyright a { 
+        text-decoration: none; 
+        color: var(--branco); 
+        background-color: var(--bordo); 
+    } 
+    /* botão de subir */
+    #topo { 
+        position: fixed; 
+        bottom: 75px; 
+        right: 15px; 
+    }
 
 }
 /* Fim - Smartphone portrait ********************** */
@@ -576,6 +596,7 @@ footer {
     main h2 {
         font-size: 3rem;
     }
+    
 }
 
 /* Tablet landscape */
@@ -716,8 +737,8 @@ footer {
 /* Google Maps */
 #googlemaps iframe {
     display: block;
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
     border-radius: 50px;
     border: 5px solid var(--branco);
 }
@@ -836,6 +857,49 @@ footer {
     text-decoration: none;
     color: var(--branco);
 }
+/* Notebook e telas grandes */
+@media (min-width: 992px) {
+
+    footer {
+        padding: 10px 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        background-color: #925e5e;
+    }
+
+    #social {
+        position: relative;
+        top: 10px;
+        left: 100px;
+        transform: none;
+        margin-bottom: 25px;
+    }
+
+    #copyright {
+        position: relative;
+        top: 10px;
+        right: 500px;
+        left: 0px;
+        color: #ffffff;
+        transform: none;
+        margin-top: 10px;
+        background-color: #925e5e;
+    }
+
+    #copyright p {
+        font-size: 15px;
+        top: auto;
+        right: 500px;
+        left: 0px;
+    }
+    #copyright a { 
+        text-decoration: none; 
+        color: var(--branco); 
+        background-color: var(--bordo); 
+    } 
+}
 }
 
 /* Notebook / TV - Full HD ou 4K */
@@ -853,6 +917,3 @@ footer {
         font-size: 3rem;
     }
 }
-
-
-
