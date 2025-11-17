@@ -187,7 +187,7 @@ main h2 {
 #sobre {
     padding: 50px 10px;
     background-color: var(--begeMédio);
-    border-top:8px solid var(--branco);
+    border-top: 8px solid var(--branco);
 }
 
 #sobre .container {
@@ -221,7 +221,7 @@ main h2 {
 #wireframe {
     padding: 50px 10px;
     background-color: var(--bordo);
-    border-top:8px solid var(--branco);
+    border-top: 8px solid var(--branco);
 }
 
 #wireframe .container {
@@ -252,6 +252,16 @@ main h2 {
     margin-bottom: 20px;
 }
 
+#qrcode {
+    display: inline;
+}
+
+#qrcode img {
+    display: none;
+    width: 100px;
+    height: 100px;
+}
+
 .botão {
     display: inline-block;
     text-decoration: none;
@@ -274,14 +284,14 @@ main h2 {
 /* Cartões */
 /* Seção principal */
 #card {
-    display: flex ;
+    display: flex;
     background-color: var(--branco);
-    flex-direction: column ;
-    align-items: center ;
-    justify-content: center ;
-    width: 100% ;
-    padding: 30px 0 ;
-    box-sizing: border-box ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30px 0;
+    box-sizing: border-box;
 }
 
 /* Container com os cards centralizados e espaçados */
@@ -297,13 +307,14 @@ main h2 {
     justify-content: center;
     width: 100%;
     padding: 30px 0;
-    border-top:8px solid var(--branco);
+    border-top: 8px solid var(--branco);
 }
 
 /* Container com os cards centralizados e espaçados */
 #card .container {
     display: flex;
-    flex-direction: column; /* empilhados no celular */
+    flex-direction: column;
+    /* empilhados no celular */
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -319,7 +330,8 @@ main h2 {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 90%; /* ocupa quase toda a tela no celular */
+    width: 90%;
+    /* ocupa quase toda a tela no celular */
     max-width: 420px;
     background-color: #925e5e;
     border-radius: 20px;
@@ -360,7 +372,7 @@ main h2 {
     flex-grow: 1;
 }
 
-#endereco { 
+#endereco {
     background-color: var(--begeMédio);
     padding: 60px 10px;
     border-top: 8px solid var(--branco);
@@ -384,7 +396,7 @@ main h2 {
     height: 250px;
     border-radius: 10px;
     border: 8px solid var(--bordo);
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     object-fit: cover;
 }
 
@@ -392,7 +404,7 @@ main h2 {
 #contatos img {
     margin-top: 15px;
     margin-left: 5px;
-    
+
     justify-content: left;
 }
 
@@ -487,59 +499,72 @@ main h2 {
         font-size: 14px;
         padding: 6px 14px;
     }
-    #contatos a{
-    text-decoration: none;
-    color: var(--branco);
+
+    #contatos a {
+        text-decoration: none;
+        color: var(--branco);
 
     }
+
     #local a {
-    text-decoration: none;
-    color: var(--branco);
-}
-/* Rodapé */ 
-footer { 
-    padding: 50px 10px; 
-    background-color: var(--bordo); 
-    color: var(--bordo); align-items: 
-    center; position: relative; 
-} 
-
-    /* Ícones no topo, centralizados */ 
-    #social { 
-        position: absolute; 
-        top: 5px; left: 50%; 
-        transform: translateX(-50%);  
+        text-decoration: none;
+        color: var(--branco);
     }
-     /* Copyright logo abaixo dos ícones */ 
-     #copyright .container{ 
-        position: absolute; 
-        top: 
-        50px; /* distância dos botões – ajuste se quiser */ 
-        transform: translateX(-50%); 
-        margin-right: 50px; 
-        text-align: center; 
-        font-size: 5px; /* menor */ 
-    } 
-    #copyright p { 
-        text-decoration: none; 
-        top: 5px; 
-        text-align: center; 
-        font-size: 15px; 
-        color: var(--branco); 
-    } 
-    #copyright a { 
-        text-decoration: none; 
-        color: var(--branco); 
-        background-color: var(--bordo); 
-    } 
+
+    /* Rodapé */
+    footer {
+        padding: 50px 10px;
+        background-color: var(--bordo);
+        color: var(--bordo);
+        align-items:
+            center;
+        position: relative;
+    }
+
+    /* Ícones no topo, centralizados */
+    #social {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Copyright logo abaixo dos ícones */
+    #copyright .container {
+        position: absolute;
+        top:
+            50px;
+        /* distância dos botões – ajuste se quiser */
+        transform: translateX(-50%);
+        margin-right: 50px;
+        text-align: center;
+        font-size: 5px;
+        /* menor */
+    }
+
+    #copyright p {
+        text-decoration: none;
+        top: 5px;
+        text-align: center;
+        font-size: 15px;
+        color: var(--branco);
+    }
+
+    #copyright a {
+        text-decoration: none;
+        color: var(--branco);
+        background-color: var(--bordo);
+    }
+
     /* botão de subir */
-    #topo { 
-        position: fixed; 
-        bottom: 75px; 
-        right: 15px; 
+    #topo {
+        position: fixed;
+        bottom: 75px;
+        right: 15px;
     }
 
 }
+
 /* Fim - Smartphone portrait ********************** */
 
 
@@ -586,7 +611,6 @@ footer {
     main h2 {
         font-size: 3rem;
     }
-    
 }
 
 /* Tablet landscape */
@@ -598,6 +622,61 @@ footer {
     #hero img {
         display: none;
     }
+
+    /* Rodapé */
+    footer {
+        padding: 50px 10px;
+        background-color: var(--bordo);
+        color: var(--bordo);
+        align-items:
+            center;
+        position: relative;
+    }
+
+    /* Ícones no topo, centralizados */
+    #social {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Copyright logo abaixo dos ícones */
+    #copyright .container {
+        position: absolute;
+        top:50px;
+        /* distância dos botões – ajuste se quiser */
+        transform: translateX(-50%);
+        margin-right: 50px;
+        text-align: center;
+        font-size: 5px;
+        /* menor */
+    }
+
+    #copyright p {
+        text-decoration: none;
+        top: 5px;
+        text-align: center;
+        font-size: 15px;
+        color: var(--branco);
+        margin-left: 250px;
+    }
+
+    #copyright a {
+        text-decoration: none;
+        text-align: center;
+        color: var(--branco);
+        background-color: var(--bordo);
+    }
+
+    /* botão de subir */
+    #topo {
+        position: fixed;
+        bottom: 75px;
+        right: 15px;
+    }
+
+
 }
 
 /* Notebook / PC - HD */
@@ -703,185 +782,202 @@ footer {
         font-size: 2rem;
     }
 
+    #qrcode {
+        display: inline;
+    }
+
+    #qrcode img {
+        display: inline;
+        margin-top: 10px;
+        width: 100px;
+        height: 100px;
+    }
+
     #card .container {
-        flex-direction: row; /* lado a lado */
+        flex-direction: row;
+        /* lado a lado */
         flex-wrap: wrap;
         justify-content: center;
         gap: 40px;
     }
-    #endereco { 
-    background-color: var(--begeMédio);
-    padding: 50px 10px;
-    border-top: 8px solid var(--branco);
-}
 
-#endereco .container {
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
+    #endereco {
+        background-color: var(--begeMédio);
+        padding: 50px 10px;
+        border-top: 8px solid var(--branco);
+    }
 
-/* Google Maps */
-#googlemaps iframe {
-    display: block;
-    width: 300px;
-    height: 200px;
-    border-radius: 50px;
-    border: 5px solid var(--branco);
-}
-
-/* Contatos padrão (mobile/tablet) */
-#contatos {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 20px;
-}
-
-/* Computador: duas colunas ao lado direito do mapa */
-@media (min-width: 992px) {
     #endereco .container {
         flex-wrap: nowrap;
         align-items: flex-start;
-    }
-
-    #contatos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "telefone local"
-            "contato email";
-        gap: 25px 40px;
-        justify-items: end;
+        display: flex;
         align-items: center;
-        text-align: left;
-        width: 50%;
+        justify-content: space-between;
+        gap: 40px;
     }
 
-    #telefone {
-        grid-area: telefone;
+    /* Google Maps */
+    #googlemaps iframe {
+        display: block;
+        width: 300px;
+        height: 200px;
+        border-radius: 50px;
+        border: 5px solid var(--branco);
     }
 
-    #local {
-        grid-area: local;
-    }
-
-    #email {
-        grid-area: email;
-    }
-}
-
-#contato img {
-    margin-top: 15px;
-    margin-left: 5px;
-    text-align: left;
-    justify-content: left;
-}
-
-#contatos p {
-    margin-top: 5px;
-    margin-left: 5px;
-    color: var(--branco);
-    text-align: center;
-    justify-content: right;
-}
-
-#telefone img {
-    margin-top: 15px;
-    margin-left: 5px;
-    justify-content: left;
-}
-
-#telefone p {
-    margin-top: 5px;
-    margin-left: 5px;
-    color: var(--branco);
-    text-align: center;
-    justify-content: right;
-}
-
-#local img {
-    margin-top: 15px;
-    margin-left: 5px;
-    justify-content: left;
-}
-
-#local p {
-    margin-top: 5px;
-    margin-left: 5px;
-    color: var(--branco);
-    text-align: center;
-    justify-content: right;
-}
-
-#email img {
-    margin-top: 15px;
-    margin-left: 5px;
-    justify-content: left;
-}
-
-#email p {
-    margin-top: 5px;
-    margin-left: 5px;
-    color: var(--branco);
-    text-align: center;
-    justify-content: right;
-}
-#contatos a{
-    text-decoration: none;
-    color: var(--branco);
-
-    }
-    #local a {
-    text-decoration: none;
-    color: var(--branco);
-}
-/* Notebook e telas grandes */
-@media (min-width: 992px) {
-
-    footer {
-        padding: 10px 5px;
+    /* Contatos padrão (mobile/tablet) */
+    #contatos {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        position: relative;
-        background-color: #925e5e;
+        align-items: flex-end;
+        gap: 20px;
     }
 
-    #social {
-        position: relative;
-        top: 10px;
-        left: 100px;
-        transform: none;
-        margin-bottom: 25px;
+    /* Computador: duas colunas ao lado direito do mapa */
+    @media (min-width: 992px) {
+        #endereco .container {
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        }
+
+        #contatos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "telefone local"
+                "contato email";
+            gap: 25px 40px;
+            justify-items: end;
+            align-items: center;
+            text-align: left;
+            width: 50%;
+        }
+
+        #telefone {
+            grid-area: telefone;
+        }
+
+        #local {
+            grid-area: local;
+        }
+
+        #email {
+            grid-area: email;
+        }
     }
 
-    #copyright {
-        position: relative;
-        top: 10px;
-        right: 500px;
-        left: 0px;
-        color: #ffffff;
-        transform: none;
-        margin-top: 10px;
-        background-color: #925e5e;
+    #contato img {
+        margin-top: 15px;
+        margin-left: 5px;
+        text-align: left;
+        justify-content: left;
     }
 
-    #copyright p {
-        font-size: 15px;
-        top: auto;
-        right: 500px;
-        left: 0px;
+    #contatos p {
+        margin-top: 5px;
+        margin-left: 5px;
+        color: var(--branco);
+        text-align: center;
+        justify-content: right;
     }
-    #copyright a { 
-        text-decoration: none; 
-        color: var(--branco); 
-        background-color: var(--bordo); 
-    } 
-}
+
+    #telefone img {
+        margin-top: 15px;
+        margin-left: 5px;
+        justify-content: left;
+    }
+
+    #telefone p {
+        margin-top: 5px;
+        margin-left: 5px;
+        color: var(--branco);
+        text-align: center;
+        justify-content: right;
+    }
+
+    #local img {
+        margin-top: 15px;
+        margin-left: 5px;
+        justify-content: left;
+    }
+
+    #local p {
+        margin-top: 5px;
+        margin-left: 5px;
+        color: var(--branco);
+        text-align: center;
+        justify-content: right;
+    }
+
+    #email img {
+        margin-top: 15px;
+        margin-left: 5px;
+        justify-content: left;
+    }
+
+    #email p {
+        margin-top: 5px;
+        margin-left: 5px;
+        color: var(--branco);
+        text-align: center;
+        justify-content: right;
+    }
+
+    #contatos a {
+        text-decoration: none;
+        color: var(--branco);
+
+    }
+
+    #local a {
+        text-decoration: none;
+        color: var(--branco);
+    }
+
+    /* Notebook e telas grandes */
+    @media (min-width: 992px) {
+
+        footer {
+            padding: 10px 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            background-color: #925e5e;
+        }
+
+        #social {
+            position: relative;
+            top: 10px;
+            left: 100px;
+            transform: none;
+            margin-bottom: 25px;
+        }
+
+        #copyright {
+            position: relative;
+            top: 10px;
+            right: 500px;
+            left: 0px;
+            color: #ffffff;
+            transform: none;
+            margin-top: 10px;
+            background-color: #925e5e;
+        }
+
+        #copyright p {
+            font-size: 15px;
+            top: auto;
+            right: 500px;
+            left: 0px;
+        }
+
+        #copyright a {
+            text-decoration: none;
+            color: var(--branco);
+            background-color: var(--bordo);
+        }
+    }
 }
 
 /* Notebook / TV - Full HD ou 4K */
