@@ -43,6 +43,7 @@ body {
     text-shadow:
         0px 2px 3px rgba(0, 0, 0, 0.10),
         0px 4px 6px rgba(43, 26, 26, 0.05);
+    margin: 25px;
 }
 
 /*Smartphone portrait*/
@@ -198,6 +199,7 @@ main h2 {
 #video iframe {
     width: 355px;
     height: 196px;
+    margin-top: 20px;
 }
 
 .sobre-text h2 {
@@ -338,6 +340,7 @@ main h2 {
     border: 6px solid var(--branco);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     padding: 25px;
+    margin-top: 10px;
     box-sizing: border-box;
 }
 
@@ -360,7 +363,7 @@ main h2 {
     font-family: 'Noto Serif';
     font-size: 1.4rem;
     text-align: center;
-    margin-bottom: 15px;
+    margin: 15px;
 }
 
 .card p {
@@ -369,6 +372,7 @@ main h2 {
     font-size: 1rem;
     line-height: 1.5;
     text-align: center;
+    margin: 20px;
     flex-grow: 1;
 }
 
@@ -404,15 +408,12 @@ main h2 {
 #contatos img {
     margin-top: 15px;
     margin-left: 5px;
-
     justify-content: left;
 }
 
 #contatos p {
     margin-top: 5px;
     margin-left: 5px;
-    background-color: var(--bordo);
-    border: 2px solid var(--branco);
     border-radius: 25px;
     width: 150px;
     height: 30px;
@@ -422,15 +423,13 @@ main h2 {
 }
 
 #telefone img {
-    margin-top: 15px;
+    margin-top: 5px;
     margin-left: 5px;
 }
 
 #telefone p {
     margin-top: 5px;
     margin-left: 5px;
-    background-color: var(--bordo);
-    border: 2px solid var(--branco);
     border-radius: 25px;
     width: 150px;
     height: 30px;
@@ -448,8 +447,6 @@ main h2 {
 #local p {
     margin-top: 5px;
     margin-left: 5px;
-    background-color: var(--bordo);
-    border: 2px solid var(--branco);
     border-radius: 25px;
     width: 260px;
     height: 80px;
@@ -467,8 +464,6 @@ main h2 {
 #email p {
     margin-top: 5px;
     margin-left: 5px;
-    background-color: var(--bordo);
-    border: 2px solid var(--branco);
     border-radius: 25px;
     width: 260px;
     height: 30px;
@@ -500,7 +495,7 @@ main h2 {
         padding: 6px 14px;
     }
 
-    #contatos a {
+    #contato a {
         text-decoration: none;
         color: var(--branco);
 
@@ -611,6 +606,58 @@ main h2 {
     main h2 {
         font-size: 3rem;
     }
+    /* Rodapé */
+    footer {
+        padding: 50px 10px;
+        background-color: var(--bordo);
+        color: var(--bordo);
+        align-items:
+            center;
+        position: relative;
+    }
+
+    /* Ícones no topo, centralizados */
+    #social {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Copyright logo abaixo dos ícones */
+    #copyright .container {
+        position: absolute;
+        top:50px;
+        /* distância dos botões – ajuste se quiser */
+        transform: translateX(-50%);
+        margin-right: 50px;
+        text-align: center;
+        font-size: 5px;
+        /* menor */
+    }
+
+    #copyright p {
+        text-decoration: none;
+        top: 5px;
+        text-align: center;
+        font-size: 15px;
+        color: var(--branco);
+        margin-left: 100px;
+    }
+
+    #copyright a {
+        text-decoration: none;
+        text-align: center;
+        color: var(--branco);
+        background-color: var(--bordo);
+    }
+
+    /* botão de subir */
+    #topo {
+        position: fixed;
+        bottom: 75px;
+        right: 15px;
+    }
 }
 
 /* Tablet landscape */
@@ -675,6 +722,15 @@ main h2 {
         bottom: 75px;
         right: 15px;
     }
+    #googlemaps iframe {
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    border: 8px solid var(--bordo);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-left: 75%;
+    object-fit: cover;
+}
 
 
 }
@@ -782,16 +838,39 @@ main h2 {
         font-size: 2rem;
     }
 
+    /* APENAS COMPUTADOR (≥ 992px) */
+@media (min-width: 992px) {
+
+    #wireframe .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .wireframe-text {
+        width: 60%;
+        text-align: left;
+    }
+
+    .botão {
+        margin-top: 10px;
+        margin-left: 300px;
+    }
+
     #qrcode {
-        display: inline;
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
     }
 
     #qrcode img {
-        display: inline;
-        margin-top: 10px;
-        width: 100px;
-        height: 100px;
+        display: block;
+        width: 200px;
+        height: 200px;
     }
+}
 
     #card .container {
         flex-direction: row;
@@ -840,7 +919,7 @@ main h2 {
             align-items: flex-start;
         }
 
-        #contatos {
+        #contato {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-areas:
