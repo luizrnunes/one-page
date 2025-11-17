@@ -392,7 +392,7 @@ main h2 {
 #contatos img {
     margin-top: 15px;
     margin-left: 5px;
-    align-items: left;
+    
     justify-content: left;
 }
 
@@ -406,15 +406,12 @@ main h2 {
     height: 30px;
     text-align: center;
     color: var(--branco);
-    align-items: right;
     justify-content: right;
 }
 
 #telefone img {
     margin-top: 15px;
     margin-left: 5px;
-    align-items: left;
-    justify-content: left;
 }
 
 #telefone p {
@@ -427,14 +424,12 @@ main h2 {
     height: 30px;
     text-align: center;
     color: var(--branco);
-    align-items: right;
     justify-content: right;
 }
 
 #local img {
     margin-top: -20px;
     margin-left: 5px;
-    align-items: left;
     justify-content: left;
 }
 
@@ -448,14 +443,12 @@ main h2 {
     height: 80px;
     text-align: center;
     color: var(--branco);
-    align-items: right;
     justify-content: right;
 }
 
 #email img {
     margin-top: 15px;
     margin-left: 5px;
-    align-items: left;
     justify-content: left;
 }
 
@@ -469,7 +462,6 @@ main h2 {
     height: 30px;
     text-align: center;
     color: var(--branco);
-    align-items: right;
     justify-content: right;
 }
 
@@ -516,8 +508,7 @@ footer {
     #social { 
         position: absolute; 
         top: 5px; left: 50%; 
-        transform: translateX(-50%); 
-        margin: 1; 
+        transform: translateX(-50%);  
     }
      /* Copyright logo abaixo dos ícones */ 
      #copyright .container{ 
@@ -526,7 +517,6 @@ footer {
         50px; /* distância dos botões – ajuste se quiser */ 
         transform: translateX(-50%); 
         margin-right: 50px; 
-        align-items: 50px; 
         text-align: center; 
         font-size: 5px; /* menor */ 
     } 
@@ -787,7 +777,6 @@ footer {
 #contato img {
     margin-top: 15px;
     margin-left: 5px;
-    align-items: left;
     text-align: left;
     justify-content: left;
 }
@@ -796,7 +785,6 @@ footer {
     margin-top: 5px;
     margin-left: 5px;
     color: var(--branco);
-    align-items: right;
     text-align: center;
     justify-content: right;
 }
@@ -804,7 +792,6 @@ footer {
 #telefone img {
     margin-top: 15px;
     margin-left: 5px;
-    align-items: left;
     justify-content: left;
 }
 
@@ -813,14 +800,12 @@ footer {
     margin-left: 5px;
     color: var(--branco);
     text-align: center;
-    align-items: right;
     justify-content: right;
 }
 
 #local img {
     margin-top: 15px;
     margin-left: 5px;
-    align-items: left;
     justify-content: left;
 }
 
@@ -829,14 +814,12 @@ footer {
     margin-left: 5px;
     color: var(--branco);
     text-align: center;
-    align-items: right;
     justify-content: right;
 }
 
 #email img {
     margin-top: 15px;
     margin-left: 5px;
-    align-items: left;
     justify-content: left;
 }
 
@@ -845,7 +828,6 @@ footer {
     margin-left: 5px;
     color: var(--branco);
     text-align: center;
-    align-items: right;
     justify-content: right;
 }
 #contatos a{
